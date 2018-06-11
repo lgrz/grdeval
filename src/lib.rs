@@ -166,11 +166,10 @@ impl Config {
 
     pub fn usage(name: &str, opts: Options) {
         let brief = format!("Usage: {} [options] <qrels> <file>", name);
-        print!("{}", opts.usage(&brief));
+        eprint!("{}", opts.usage(&brief));
     }
 }
 
-#[allow(unused_variables)]
 pub struct QrelEntry {
     topic: String,
     docid: String,
